@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum – KainCo Productions</title>
+<meta name="robots" content="noindex, nofollow">
+
+<style>
+body {
+    font-family: Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #0f0f0f;
+    color: #f1f1f1;
+}
+h1 {
+    border-bottom: 3px solid #ff0000;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+.box {
+    background: #212121;
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #333;
+}
+a {
+    color: #3ea6ff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.section {
+    margin-top: 18px;
+}
+.small {
+    margin-top: 22px;
+    font-size: 0.9em;
+    color: #b5b5b5;
+}
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.85em;
+    color: #777;
+}
+.spacer {
+    display: inline-block;
+    width: 0.2em;
+}
+/* Dünnes Wort innerhalb von strong */
+strong .thin {
+    font-weight: 300; /* dünn / feine Schrift */
+}
+</style>
+</head>
+
+<body>
+
+<h1>Impressum</h1>
+
+<div class="box">
+
+<p><strong>Angaben gemäß § 5 TMG</strong></p>
+
+<div class="section">
+<p>
+<strong><span id="name-placeholder"></span></strong><br>
+handelnd unter <strong>KainCo Productions</strong>
+</p>
+</div>
+
+<div class="section">
+<p>
+<strong>Anschrift:</strong><br>
+<span id="address-placeholder"></span>
+</p>
+</div>
+
+<div class="section">
+<p>
+<strong>Kontakt:</strong><br>
+E-Mail: <span id="email-placeholder">[wird geladen]</span>
+</p>
+</div>
+
+<div class="small">
+<p>
+<strong>Umsatzsteuer:</strong><br>
+Keine Umsatzsteuer-Identifikationsnummer gemäß § 19 UStG
+(Kleinunternehmerregelung)
+</p>
+</div>
+
+<div class="small">
+<p>
+Dieses Impressum gilt für alle unter dem Namen
+<strong>„KainCo Productions <span class="thin">oder</span> KainCo - Dedicated to Games“</strong> betriebenen
+Online-Präsenzen, insbesondere für:
+<br><br>
+YouTube, Instagram und TikTok.
+</p>
+</div>
+
+<div class="small">
+<p>
+Hinweis: Diese Seite ist auf GitHub gehostet. Es werden keine personenbezogenen Daten getrackt. 
+Für Inhalte, Cookies und Datenschutz auf verlinkten Seiten (YouTube, Instagram, TikTok), Discord-Servern oder Foren übernehmen wir keine Verantwortung. 
+Die Links dienen lediglich der Unterstützung der jeweiligen Communities.
+</p>
+</div>
+
+</div>
+
+<footer>
+&copy; <span id="year-placeholder"></span> KainCo Productions
+</footer>
+
+<script>
+(function () {
+    /* ===== Name-Botschutz ===== */
+    var first = "Salvatore";
+    var last  = "Cocozza";
+    document.getElementById("name-placeholder").textContent = first + " " + last;
+
+    /* ===== Anschrift-Botschutz ===== */
+    var street = "Kleiststraße";
+    var number = "37";
+    var zip    = "63303";
+    var city   = "Dreieich";
+    var country= "Deutschland";
+    document.getElementById("address-placeholder").textContent =
+        street + " " + number + ", " + zip + " " + city + ", " + country;
+
+    /* ===== E-Mail-Botschutz ===== */
+    var user = "anfragen";
+    var tag  = "-kainco";
+    var domain = "proton.me";
+    var email = user + tag + "@" + domain;
+    document.getElementById("email-placeholder").innerHTML =
+        '<a href="mailto:' + email + '">' + email + '</a>';
+
+    /* ===== Jahr ===== */
+    document.getElementById("year-placeholder").textContent = new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>
